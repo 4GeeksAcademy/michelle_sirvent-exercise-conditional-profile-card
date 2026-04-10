@@ -31,26 +31,17 @@ function render(variables = {}) {
     cover = "<div class='cover'></div>";
   }
 
-  let fullName = `${variables.name || "Your name"} ${variables.lastName ||
-    "Your lastname"}`;
+  let fullName = `${variables.name || "Your name"} ${variables.lastName || "Your lastname"}`;
   let role = variables.role || "Web Developer";
   let location = `${variables.city || "Miami"}, ${variables.country || "USA"}`;
 
-  let twitter = variables.twitter
-    ? `<li><a href="https://twitter.com/${variables.twitter}"><i class="fab fa-twitter"></i></a></li>`
-    : "";
+  let twitter = variables.twitter ? `<li><a href="https://twitter.com/${variables.twitter}"><i class="fab fa-twitter"></i></a></li>` : "";
 
-  let github = variables.github
-    ? `<li><a href="https://github.com/${variables.github}"><i class="fab fa-github"></i></a></li>`
-    : "";
+  let github = variables.github ? `<li><a href="https://github.com/${variables.github}"><i class="fab fa-github"></i></a></li>` : "";
 
-  let linkedin = variables.linkedin
-    ? `<li><a href="https://linkedin.com/in/${variables.linkedin}"><i class="fab fa-linkedin"></i></a></li>`
-    : "";
+  let linkedin = variables.linkedin ? `<li><a href="https://linkedin.com/in/${variables.linkedin}"><i class="fab fa-linkedin"></i></a></li>` : "";
 
-  let instagram = variables.instagram
-    ? `<li><a href="https://instagram.com/${variables.instagram}"><i class="fab fa-instagram"></i></a></li>`
-    : "";
+  let instagram = variables.instagram ? `<li><a href="https://instagram.com/${variables.instagram}"><i class="fab fa-instagram"></i></a></li>` : "";
 
   document.querySelector("#widget_content").innerHTML = `
     <div class="widget">
